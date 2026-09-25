@@ -11,11 +11,15 @@
   <title>Prestige Plumbing & Electrical Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="page-loader" aria-hidden="true"><div class="loader-brand"><span>P</span><b>PRESTIGE</b></div><div class="loader-line"><i></i></div></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
 
@@ -36,16 +40,19 @@
   </header>
 
   <main id="main">
-    <section class="hero section-pad">
+    <section class="hero section-pad" data-section="01">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-streak streak-one" aria-hidden="true"></div>
+      <div class="hero-streak streak-two" aria-hidden="true"></div>
       <div class="hero-orb orb-one" aria-hidden="true"></div>
       <div class="hero-orb orb-two" aria-hidden="true"></div>
       <div class="hero-copy reveal">
         <p class="eyebrow"><span></span> Plumbing &amp; electrical specialists</p>
-        <h1>Built right.<br><em>Built to last.</em></h1>
+        <h1><span class="hero-line"><span>Built right.</span></span><span class="hero-line"><em>Built to last.</em></span></h1>
         <p class="hero-lead">Reliable, high-quality technical solutions for your home or business—from precision electrical work to expert plumbing installations and repairs.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Request a quote <span>↗</span></a>
-          <a class="button button-ghost" href="#work">Explore our work</a>
+          <a class="button button-primary magnetic" href="#contact">Request a quote <span>↗</span></a>
+          <a class="button button-ghost magnetic" href="#work">Explore our work</a>
         </div>
         <div class="trust-row" aria-label="Our service values">
           <div><b>01</b><span>Safe workmanship</span></div>
@@ -54,7 +61,7 @@
         </div>
       </div>
       <div class="hero-visual reveal reveal-delay">
-        <div class="visual-frame">
+        <div class="visual-frame" data-tilt>
           <img src="assets/images/project-water-heater.jpg" alt="Completed water heater plumbing project" fetchpriority="high">
           <div class="frame-badge"><span class="pulse"></span> Ready to help</div>
           <div class="frame-label"><span>Featured project</span><strong>Precision in every detail</strong></div>
@@ -71,13 +78,13 @@
       </div>
     </section>
 
-    <section class="services section-pad" id="services">
+    <section class="services section-pad numbered-section" id="services" data-section="02">
       <div class="section-heading reveal">
         <div><p class="eyebrow"><span></span> What we do</p><h2>Complete solutions.<br><em>One trusted team.</em></h2></div>
         <p>We bring careful diagnosis, quality workmanship and a clean finish to every job—big or small.</p>
       </div>
       <div class="service-grid">
-        <article class="service-card reveal">
+        <article class="service-card reveal" data-tilt>
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="M13 6v11a7 7 0 0 0 7 7h8a7 7 0 0 1 7 7v11M7 6h12M29 42h12"/><circle cx="24" cy="24" r="3"/></svg>
           </div>
@@ -85,7 +92,7 @@
           <p>Professional installations, fault finding and dependable repairs designed to protect your property.</p>
           <a href="#contact">Discuss your project <span>→</span></a>
         </article>
-        <article class="service-card featured reveal reveal-delay">
+        <article class="service-card featured reveal reveal-delay" data-tilt>
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="m27 4-14 23h11l-3 17 14-24H24l3-16Z"/></svg>
           </div>
@@ -93,7 +100,7 @@
           <p>Safe, precise electrical solutions for homes and businesses, completed with attention to every detail.</p>
           <a href="#contact">Discuss your project <span>→</span></a>
         </article>
-        <article class="service-card reveal reveal-delay-2">
+        <article class="service-card reveal reveal-delay-2" data-tilt>
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="M10 38 38 10M28 8l12 12M7 31l10 10M14 27l7 7M27 14l7 7"/></svg>
           </div>
@@ -104,7 +111,7 @@
       </div>
     </section>
 
-    <section class="work section-pad" id="work">
+    <section class="work section-pad numbered-section" id="work" data-section="03">
       <div class="section-heading reveal">
         <div><p class="eyebrow"><span></span> Recent projects</p><h2>Work that speaks<br><em>for itself.</em></h2></div>
         <p>Real work from the Prestige team, delivered with care, precision and pride.</p>
@@ -119,7 +126,7 @@
       <div class="center-action reveal"><a class="button button-ghost" href="https://www.facebook.com/people/Prestige-Plumbing-Electrical-services/61590633609189/" target="_blank" rel="noopener">View more on Facebook <span>↗</span></a></div>
     </section>
 
-    <section class="about section-pad" id="about">
+    <section class="about section-pad numbered-section" id="about" data-section="04">
       <div class="about-logo reveal"><img src="assets/images/brand-cover.jpg" alt="Prestige Plumbing and Electrical Services"><div class="logo-ring"></div></div>
       <div class="about-copy reveal reveal-delay">
         <p class="eyebrow"><span></span> Why Prestige</p>
@@ -133,14 +140,20 @@
       </div>
     </section>
 
-    <section class="contact section-pad" id="contact">
+    <section class="contact section-pad numbered-section" id="contact" data-section="05">
       <div class="contact-panel reveal">
-        <div>
-          <p class="eyebrow light"><span></span> Let's get to work</p>
-          <h2>Have a project<br><em>in mind?</em></h2>
-          <p>Tell us what you need and start a conversation with the Prestige team on our official Facebook page.</p>
+        <div class="contact-copy">
+          <p class="eyebrow light"><span></span> Start a conversation</p>
+          <h2>Let's build something<br><em>that lasts.</em></h2>
+          <p>From a quick repair to a complete installation, tell us what you need. The Prestige team is ready to listen, advise and deliver.</p>
+          <div class="contact-points"><span><i></i> Direct response</span><span><i></i> No-obligation enquiry</span></div>
         </div>
-        <a class="contact-button" href="https://www.facebook.com/people/Prestige-Plumbing-Electrical-services/61590633609189/" target="_blank" rel="noopener"><span>Message us<br><b>on Facebook</b></span><i>↗</i></a>
+        <div class="contact-card" data-tilt>
+          <div class="contact-card-top"><img src="assets/images/brand-cover.jpg" alt="Prestige logo"><div><b>Prestige</b><span>Plumbing &amp; Electrical Services</span></div><i class="online-dot"></i></div>
+          <p>Ready to discuss your plumbing or electrical project?</p>
+          <a class="message-button magnetic" href="https://www.facebook.com/people/Prestige-Plumbing-Electrical-services/61590633609189/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.14 2 11.25c0 2.91 1.46 5.5 3.74 7.2V22l3.42-1.88c.9.25 1.86.38 2.84.38 5.52 0 10-4.14 10-9.25S17.52 2 12 2Zm1 12.45-2.55-2.72-4.98 2.72 5.48-5.82 2.61 2.72 4.92-2.72L13 14.45Z"/></svg><span><small>Continue on</small>Facebook Messenger</span><b>↗</b></a>
+          <small class="contact-note">You will be redirected to our official Facebook page.</small>
+        </div>
       </div>
     </section>
   </main>
