@@ -1,8 +1,8 @@
 const toggle=document.querySelector('.menu-toggle');
 const menu=document.querySelector('#menu');
 const header=document.querySelector('.site-header');
-toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));menu.classList.toggle('open',!open);document.body.classList.toggle('menu-open',!open)});
-menu?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');menu.classList.remove('open');document.body.classList.remove('menu-open')}));
+toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));toggle.setAttribute('aria-label',open?'Open menu':'Close menu');menu.classList.toggle('open',!open);document.body.classList.toggle('menu-open',!open)});
+menu?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');menu.classList.remove('open');document.body.classList.remove('menu-open')}));
 let lastY=0;
 addEventListener('scroll',()=>{const y=scrollY;header.classList.toggle('scrolled',y>24);header.classList.toggle('hidden',y>lastY&&y>180&&!menu.classList.contains('open'));lastY=y},{passive:true});
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
