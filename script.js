@@ -15,3 +15,15 @@ dialog?.querySelector('button').addEventListener('click',()=>dialog.close());
 dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
 addEventListener('keydown',event=>{if(event.key==='Escape'&&dialog?.open)dialog.close()});
 document.querySelector('#year').textContent=new Date().getFullYear();
+
+document.querySelectorAll('a,button').forEach(control=>{
+  control.addEventListener('pointerdown',()=>{
+    control.classList.add('tap');
+    setTimeout(()=>control.classList.remove('tap'),180);
+  });
+});
+
+document.querySelectorAll('a[target="_blank"]').forEach(link=>link.addEventListener('click',()=>{
+  document.body.classList.add('page-shift');
+  setTimeout(()=>document.body.classList.remove('page-shift'),520);
+}));
