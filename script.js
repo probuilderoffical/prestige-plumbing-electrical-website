@@ -27,3 +27,14 @@ document.querySelectorAll('a[target="_blank"]').forEach(link=>link.addEventListe
   document.body.classList.add('page-shift');
   setTimeout(()=>document.body.classList.remove('page-shift'),520);
 }));
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{
+  const target=document.querySelector(link.getAttribute('href'));
+  if(!target)return;
+  setTimeout(()=>{
+    target.classList.remove('section-focus');
+    void target.offsetWidth;
+    target.classList.add('section-focus');
+    setTimeout(()=>target.classList.remove('section-focus'),760);
+  },320);
+}));
